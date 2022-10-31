@@ -2,134 +2,137 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
-| -------------------------------------------------------------------
-| AUTO-LOADER
-| -------------------------------------------------------------------
-| This file specifies which systems should be loaded by default.
+| -------------------------------------------------- -----------------
+| CARGADOR AUTOMÁTICO
+| -------------------------------------------------- -----------------
+| Este archivo especifica qué sistemas deben cargarse de forma predeterminada.
 |
-| In order to keep the framework as light-weight as possible only the
-| absolute minimal resources are loaded by default. For example,
-| the database is not connected to automatically since no assumption
-| is made regarding whether you intend to use it.  This file lets
-| you globally define which systems you would like loaded with every
-| request.
+| Con el fin de mantener el marco lo más ligero posible, sólo el
+| los recursos mínimos absolutos se cargan de forma predeterminada. Por ejemplo,
+| la base de datos no se conecta automáticamente ya que no se supone
+| se hace con respecto a si tiene la intención de usarlo. Este archivo permite
+| usted define globalmente qué sistemas le gustaría cargar con cada
+| solicitud.
 |
-| -------------------------------------------------------------------
-| Instructions
-| -------------------------------------------------------------------
+| -------------------------------------------------- -----------------
+| Instrucciones
+| -------------------------------------------------- -----------------
 |
-| These are the things you can load automatically:
+| Estas son las cosas que puedes cargar automáticamente:
 |
-| 1. Packages
-| 2. Libraries
-| 3. Drivers
-| 4. Helper files
-| 5. Custom config files
-| 6. Language files
-| 7. Models
+| 1. Paquetes
+| 2. Bibliotecas
+| 3. Conductores
+| 4. Archivos auxiliares
+| 5. Archivos de configuración personalizados
+| 6. Archivos de idioma
+| 7. Modelos
 |
 */
 
 /*
-| -------------------------------------------------------------------
-|  Auto-load Packages
-| -------------------------------------------------------------------
-| Prototype:
+| -------------------------------------------------- -----------------
+| Paquetes de carga automática
+| -------------------------------------------------- -----------------
+| Prototipo:
 |
-|  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
+| $autoload['paquetes'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
 */
 $autoload['packages'] = array();
 
 /*
-| -------------------------------------------------------------------
-|  Auto-load Libraries
-| -------------------------------------------------------------------
-| These are the classes located in system/libraries/ or your
-| application/libraries/ directory, with the addition of the
-| 'database' library, which is somewhat of a special case.
+| -------------------------------------------------- -----------------
+| Bibliotecas de carga automática
+| -------------------------------------------------- -----------------
+| Estas son las clases ubicadas en system/libraries/ o su
+| application/libraries/ directorio, con la adición del
+| biblioteca 'base de datos', que es algo así como un caso especial.
 |
-| Prototype:
+| Prototipo:
 |
-|	$autoload['libraries'] = array('database', 'email', 'session');
+| $autoload['bibliotecas'] = array('base de datos', 'correo electrónico', 'sesión');
 |
-| You can also supply an alternative library name to be assigned
-| in the controller:
+| También puede proporcionar un nombre de biblioteca alternativo para ser asignado
+| en el controlador:
 |
-|	$autoload['libraries'] = array('user_agent' => 'ua');
+| $autoload['bibliotecas'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
-
+// $autoload['libraries'] = array();
+$autoload['libraries'] = array('database', 'email', 'session');
 /*
-| -------------------------------------------------------------------
-|  Auto-load Drivers
-| -------------------------------------------------------------------
-| These classes are located in system/libraries/ or in your
-| application/libraries/ directory, but are also placed inside their
-| own subdirectory and they extend the CI_Driver_Library class. They
-| offer multiple interchangeable driver options.
+| -------------------------------------------------- -----------------
+| Controladores de carga automática
+| -------------------------------------------------- -----------------
+| Estas clases se encuentran en system/libraries/ o en su
+| application/libraries/ directorio, pero también se colocan dentro de su
+| propio subdirectorio y amplían la clase CI_Driver_Library. Ellos
+| ofrecen múltiples opciones de controladores intercambiables.
 |
-| Prototype:
+| Prototipo:
 |
-|	$autoload['drivers'] = array('cache');
+| $autoload['drivers'] = array('cache');
 |
-| You can also supply an alternative property name to be assigned in
-| the controller:
+| También puede proporcionar un nombre de propiedad alternativo para asignarlo en
+| el controlador:
 |
-|	$autoload['drivers'] = array('cache' => 'cch');
+| $autoload['drivers'] = array('cache' => 'cch');
 |
 */
+
 $autoload['drivers'] = array();
 
 /*
-| -------------------------------------------------------------------
-|  Auto-load Helper Files
-| -------------------------------------------------------------------
-| Prototype:
+| -------------------------------------------------- -----------------
+| Archivos auxiliares de carga automática
+| -------------------------------------------------- -----------------
+| Prototipo:
 |
-|	$autoload['helper'] = array('url', 'file');
+| $autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array();
+
+// $autoload['helper'] = array('base_url');
+$autoload['helper'] = array('url', 'form');
 
 /*
-| -------------------------------------------------------------------
-|  Auto-load Config files
-| -------------------------------------------------------------------
-| Prototype:
+| -------------------------------------------------- -----------------
+| Carga automática de archivos de configuración
+| -------------------------------------------------- -----------------
+| Prototipo:
 |
-|	$autoload['config'] = array('config1', 'config2');
+| $autoload['config'] = array('config1', 'config2');
 |
-| NOTE: This item is intended for use ONLY if you have created custom
-| config files.  Otherwise, leave it blank.
+| NOTA: Este artículo está diseñado para usarse SOLAMENTE si ha creado
+| archivos de configuración. De lo contrario, déjelo en blanco.
 |
 */
 $autoload['config'] = array();
 
 /*
-| -------------------------------------------------------------------
-|  Auto-load Language files
-| -------------------------------------------------------------------
-| Prototype:
+| -------------------------------------------------- -----------------
+| Carga automática de archivos de idioma
+| -------------------------------------------------- -----------------
+| Prototipo:
 |
-|	$autoload['language'] = array('lang1', 'lang2');
+| $autoload['idioma'] = array('lang1', 'lang2');
 |
-| NOTE: Do not include the "_lang" part of your file.  For example
-| "codeigniter_lang.php" would be referenced as array('codeigniter');
+| NOTA: No incluya la parte "_lang" de su archivo. Por ejemplo
+| "codeigniter_lang.php" sería referenciado como array('codeigniter');
 |
 */
 $autoload['language'] = array();
 
 /*
-| -------------------------------------------------------------------
-|  Auto-load Models
-| -------------------------------------------------------------------
-| Prototype:
+| -------------------------------------------------- -----------------
+| Modelos de carga automática
+| -------------------------------------------------- -----------------
+| Prototipo:
 |
-|	$autoload['model'] = array('first_model', 'second_model');
+| $autoload['model'] = array('primer_modelo', 'segundo_modelo');
 |
-| You can also supply an alternative model name to be assigned
-| in the controller:
+| También puede proporcionar un nombre de modelo alternativo para ser asignado
+| en el controlador:
 |
-|	$autoload['model'] = array('first_model' => 'first');
+| $autoload['model'] = array('primer_modelo' => 'primero');
 */
 $autoload['model'] = array();

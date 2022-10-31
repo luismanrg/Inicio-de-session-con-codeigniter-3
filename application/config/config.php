@@ -2,28 +2,29 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
-|--------------------------------------------------------------------------
-| Base Site URL
-|--------------------------------------------------------------------------
+|----------------------------------------------------------------- -------------------------
+| URL del sitio base
+|----------------------------------------------------------------- -------------------------
 |
-| URL to your CodeIgniter root. Typically this will be your base URL,
-| WITH a trailing slash:
+| URL a su raíz de CodeIgniter. Por lo general, esta será su URL base,
+| CON una barra diagonal:
 |
-|	http://example.com/
+| http://ejemplo.com/
 |
-| WARNING: You MUST set this value!
+| ADVERTENCIA: ¡DEBE configurar este valor!
 |
-| If it is not set, then CodeIgniter will try to guess the protocol and
-| path to your installation, but due to security concerns the hostname will
-| be set to $_SERVER['SERVER_ADDR'] if available, or localhost otherwise.
-| The auto-detection mechanism exists only for convenience during
-| development and MUST NOT be used in production!
+| Si no está configurado, CodeIgniter intentará adivinar el protocolo y
+| ruta a su instalación, pero debido a problemas de seguridad, el nombre de host
+| establecerse en $_SERVER['SERVER_ADDR'] si está disponible, o localhost en caso contrario.
+| El mecanismo de autodetección existe solo por conveniencia durante
+| desarrollo y NO DEBE usarse en producción!
 |
-| If you need to allow multiple domains, remember that this file is still
-| a PHP script and you can easily do that on your own.
+| Si necesita permitir múltiples dominios, recuerde que este archivo todavía está
+| un script PHP y puede hacerlo fácilmente por su cuenta.
 |
 */
-$config['base_url'] = '';
+
+$config['base_url'] = '/';
 
 /*
 |--------------------------------------------------------------------------
